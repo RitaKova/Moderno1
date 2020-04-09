@@ -26,10 +26,13 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
+  display: inline-block;
+  color:$color-text;
 }
 
 button:focus,
@@ -41,6 +44,9 @@ input:focus {
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-style: 15px;
+  line-height: 24px;
+  color:$color-text;
   }
 .conteiner{
       max-width: 1200px;
