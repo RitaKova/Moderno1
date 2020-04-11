@@ -189,12 +189,13 @@ padding: 155px 0px 100px;
     &-author{
         display: flex;
         align-items: center;
+        min-width: 250px;
         .avatar{
             width: 30px;
             height: 30px;
             border-radius: 50%;
             background-position:center;
-            display: inline-block;
+           // display: inline-block;
             background-repeat: no-repeat;
             background-size: cover;
             margin-right: 14px;
@@ -226,8 +227,39 @@ padding: 155px 0px 100px;
     }
         
 }
-
-
+//END SECTION PRODUCT
+// START SLIDER
+.product-slider{
+    padding: 110px 0px 120px;
+}
+.slick-track{
+    transform: translate3d(0px, 0px, 0px);
+}
+.slick-dots{
+    text-align: center;
+    margin-top: 50px;
+        li{
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    &.slick-active{
+        button{
+            background-color: $green;
+        }
+    }
+        button{
+            border-radius: 50%;
+            background-color: rgb(232, 232, 232);
+            width: 16px;
+         height: 16px;
+         border: none;
+         font-size: 0;
+         cursor: pointer;
+         outline: none;
+        }
+    }
+}
+ 
 //----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE
