@@ -42,8 +42,7 @@ input:focus {
 
 /* Начало*/
 body{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  @include f400;
   font-size: 15px;
   line-height: 24px;
   color:$color-text;
@@ -61,7 +60,7 @@ body{
 }
 .title{
   color:$bg;
-  font-weight: 700;
+  @include f700;
   font-size: 36px;
   line-height: 60px;
   text-align: center;
