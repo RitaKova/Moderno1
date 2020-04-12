@@ -424,9 +424,40 @@
         background-color: #fff;
     }
 }
-
 //END AUTHOR
+//START tutorial
+.tutorial{
+    padding: 70px 0px 120px;
+    &__inner{
+        display: flex;
+        justify-content:space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item{
+ &-images{
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
 
+ }
+ &-title{
+     @include f700;
+     font-size: 24px;
+     background-color: #f8f8f8;
+     text-align: center;
+     padding: 30px 10px;
+     color: $bg;
+     display: block;
+
+ }
+}
+//END tutorial
 
 
 //----------------------------------------------------------------------------------------------------------
