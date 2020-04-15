@@ -94,7 +94,8 @@ gulp.task("style", function () {
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
 			"node_modules/slick-carousel/slick/slick.css",
-			"node_modules/rateyo/src/jquery.rateyo.css"
+			"node_modules/rateyo/src/jquery.rateyo.css",
+			"node_modules/ion-rangeslider/css/ion.rangeSlider.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -112,6 +113,7 @@ gulp.task("script", function () {
 			"node_modules/mixitup/dist/mixitup.js",
 			"node_modules/slick-carousel/slick/slick.js",
 			"node_modules/rateyo/src/jquery.rateyo.js",
+			"node_modules/ion-rangeslider/js/ion.rangeSlider.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
