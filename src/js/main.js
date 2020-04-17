@@ -19,18 +19,10 @@ $(".js-range-slider").ionRangeSlider({
        from: 0,
         to: 600,
         prefix: "$",
-       // postfix: " €/ ₽",
           
     });
 
-/*$('.icon-th-list').on('click', function(){
- $('.product__item').addClass('list')
-});
 
-$('.icon-th-large').on('click', function(){
-        $('.product__item').removeClass('list')
-
-});*/
 $('.icon-th-list').on('click', function(){
         $('.product-page__item .product__item').addClass('list');
         $('.icon-th-list').addClass('active');
@@ -42,7 +34,13 @@ $('.icon-th-list').on('click', function(){
         $('.icon-th-large').addClass('active');
         $('.icon-th-list').removeClass('active');
       });      
-        
+$('.menu__btn').on('click', function(){
+        $('.menu__list').slideToggle();  
+});  
+
+$('.header__btn-menu').on('click', function(){
+        $('.header__box').toggleClass('active');  
+});      
 
  var mixer = mixitup ( '.products__inner-box' );
 
