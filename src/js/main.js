@@ -42,6 +42,12 @@ $('.header__btn-menu').on('click', function(){
         $('.header__box').toggleClass('active');  
 }); 
 
+$('input[type="file"], select').styler();
+
+
+
+
+
 $('.product-one__tabs .tab, .settings__tabs .tabs').on('click', function(event) {
         var id = $(this).attr('data-id');
                 $('.product-one__tabs, settings__tabs').find('.tab-item').removeClass('active-tab').hide();
