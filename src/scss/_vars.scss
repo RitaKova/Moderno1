@@ -1,26 +1,26 @@
+$bg: #fef2e8;
+$bg-tab: #4e504f;
+$tomate: #ef7f1a;
+$color-text: #000000;
 
-$red:#e8663c;
-$green:#8bc34a;
-$bg:#263238;
-$grey:#f4f6f5;
-$yellow:#fcb322;
-$tomate:#ef6c00;
-$color-text:#546e7a;
-
-
-@mixin f300 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;    
+@mixin hn700 {
+    font-family: "Helvetica Neue Cyr Bold";
+    font-weight: 700;
 }
-@mixin f500 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;    
+@mixin hn500 {
+    font-family: "Helvetica Neue Cyr Light";
+    font-weight: 500;
 }
+@mixin f400h {
+    font-family: "Conv_helios-cond";
+    font-weight: 400;
+}
+
 @mixin f700 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;    
+    font-family: "Helvetica Neue Cyr Roman";
+    font-weight: 700;
 }
 @mixin f400 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Helvetica Neue Cyr Roman";
     font-weight: 400;
 }
