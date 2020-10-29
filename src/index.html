@@ -10,11 +10,51 @@
       <section class="order-form">
         <div class="container">
           <div class="order-form__inner">
-            <form action="#" method="get">
+            <div class="form-box">
+              <p class="title-form orange-text">
+                ЗАКАЗАТЬ ВЫЕЗД ЭЛЕКТРИКА <span class="o-line"></span>
+              </p>
+              <p class="form-text"> Мы перезвоним в течении <span>15</span> минут</p>
+              <form action="#" method="get">
+                <div class="form-name">
+                  <p class="prompt">Ваше имя:</p>
+                  <input type="text" tabindex="1" name="username">
+                </div>
+                <div class="form-secondname">
+                  <p class="prompt">Ваша фамилия:</p>
+                  <input type="text" tabindex="2" name="usersecondname">
+                </div>
+                <div class="form-phone">
+                  <p class="prompt">Телефон:</p>
+                  <input type="tel" tabindex="3" name="userphone">
+                </div>
+                <div class="form-checkbox">
+                  <p class="prompt"> Срочный вызов? Поставьте галочку</p>
+                  <div class="squaredFour">
+                    <input type="checkbox" checked value="yes" id="squaredFour" name="check" />
+                    <label for="squaredFour"></label>
+                  </div>
+                </div>
+                <div class="order__button"> <button class="order__btn btn" type="submit">заказать</button>
+                  <span class="o-line"></span>
+                </div>
 
-            </form>
+              </form>
+              <div class="forn-sale">
+                <p class="sale-title">
+                  АКЦИЯ!
+                </p>
+                <p class="sale-text">
+                  <span>Замена счетчика</span> "Под ключ"
+                  <span class="line-through"> 2 500 руб.</span> 2000 руб.
+                </p>
+              </div>
+              <div class="timer">
+                <div class="eTimer"></div>
+              </div>
+            </div>
             <div class="order-form__imag">
-              <img src="" alt="">
+              <img src="img/order-form/01.png" alt="2">
             </div>
           </div>
         </div>

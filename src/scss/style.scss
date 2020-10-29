@@ -9,23 +9,15 @@
 //-----------------------------------------------------------------------------------------------------------
 //start header
 .header {
-    //color: lightgray;
     position: fixed;
+    background-color: #fff;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
-    /* &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        //background-color: black;
-        z-index: 3;
-    }*/
-
+    height: 160px;
+    // height: 100%;
+    margin-bottom: 10px;
     &__inner {
         display: flex;
         flex-direction: row;
@@ -65,25 +57,21 @@
     //text-align: right;
     text-transform: uppercase;
 }
-.header-subtitle {
-    font-size: 17px;
+.orange-text {
     @include f400;
-    color: $tomate;
-    line-height: 26px;
     text-transform: uppercase;
-    margin-bottom: 20px;
     position: relative;
     letter-spacing: 1px;
-    &::after {
-        content: "";
+    color: $tomate;
+}
+.header-subtitle {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 18px;
+    position: relative;
+    & .o-line {
         position: absolute;
-        width: 442px;
-        height: 1px;
-        background-color: #666666;
-        opacity: 0.5;
-        bottom: -9px;
-        left: 0px;
-        line-height: 0;
+        bottom: -5px;
     }
 }
 
@@ -120,19 +108,217 @@
         line-height: 27px;
     }
 
-    &__btn {
+    &__btn,
+    .btn {
         padding: 10px;
-        color: #ffffff;
-        box-shadow: 0 2px 2px rgba(136, 66, 2, 0.75), inset 0 0 16px rgba(239, 127, 26, 0.42);
         background-color: $tomate;
-        border-radius: 5px;
         font-size: 13px;
         letter-spacing: 0.3px;
     }
 }
-
+.btn {
+    color: #ffffff;
+    box-shadow: 0 2px 2px rgba(136, 66, 2, 0.75), inset 0 0 16px rgba(239, 127, 26, 0.42);
+    background-color: $tomate;
+    background-image: linear-gradient(to top, #ef7f1a 0%, #ea9403 100%);
+    border-radius: 5px;
+}
 // end header
+//start order-form
+.order-form {
+    margin-top: 180px;
+    background-color: #fef2e8;
+    &__inner {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
 
+    &__imag img {
+        max-height: 520px;
+        max-width: 600px;
+    }
+}
+.o-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #666666;
+    opacity: 0.5;
+    line-height: 0;
+}
+.title-form {
+    margin-bottom: 14px;
+    position: relative;
+    & .o-line {
+        position: absolute;
+        bottom: -6px;
+    }
+    .orange-text {
+        letter-spacing: 0.25px;
+        font-size: 16px;
+        padding-bottom: 15px;
+        font-weight: 700;
+    }
+}
+
+.form-box {
+    max-width: 300px;
+    border: 1px solid rgba(102, 102, 102, 0.5);
+    background-color: #f3ede8;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px 10px;
+}
+.form-text {
+    @include f400;
+    color: #696969;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 5px;
+    & span {
+        color: $tomate;
+        @include f700;
+        font-weight: 700;
+    }
+}
+.prompt {
+    @include f400;
+    color: $tomate;
+    font-size: 13px;
+    padding: 10px 0;
+}
+.form-box input {
+    width: 246px;
+    height: 40px;
+    border: 1px solid rgba(102, 102, 102, 0.5);
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.form-checkbox {
+    display: inline-flex;
+}
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.squaredFour {
+    display: block;
+    width: 17px;
+    margin: 6px 5px;
+    position: relative;
+}
+
+.squaredFour label {
+    cursor: pointer;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(102, 102, 102, 0.5);
+
+    -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffffff 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffffff 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffffff 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffffff 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#ffffff',GradientType=0 );
+}
+
+.squaredFour label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+
+    opacity: 0;
+    content: "";
+    color: $tomate;
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 4px;
+    left: 4px;
+    border: 3px solid $tomate;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredFour label:hover::after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0;
+}
+
+.squaredFour input[type="checkbox"]:checked + label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.order__button {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    & span {
+        position: absolute;
+        bottom: -18px;
+    }
+}
+.order__btn {
+    @include f400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 27px;
+    padding: 10px 23px;
+    background-color: #ef7f1a;
+    background-image: linear-gradient(to top, #ef7f1a 0%, #ea9403 100%);
+}
+.forn-sale {
+    text-align: center;
+    color: $tomate;
+    letter-spacing: 0.34px;
+    //line-height: 0.25px;
+    margin-bottom: 10px;
+}
+.sale-title {
+    @include hn700;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.sale-text {
+    max-width: 210px;
+    @include f400;
+    font-size: 14px;
+    line-height: 20px;
+    & span {
+        color: #696969;
+    }
+}
+.line-through {
+    text-decoration: line-through;
+}
+.order-form__imag {
+}
 //----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE

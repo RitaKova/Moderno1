@@ -4,6 +4,7 @@
   "description": "HTML5+CSS3 template for easy start website project'",
   "main": "gulpfile.js",
   "dependencies": {
+    "flipclock": "^0.10.8",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   },
