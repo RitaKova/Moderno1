@@ -1,11 +1,27 @@
 $(function () {
 
-  /* $('.header__burger').click(function (event) {
-     $('.header__burger, .header__menu').toggleClass('_active_');
-     $('.body').toggleClass('lock');
-   });
- 
- */
+  $(document).ready(function () {
+    $('.slider').slick({
+      infinite: true,
+      adaptiveHeight: true,
+      prevArrow: ' <button class=" slick-btn slick-prev"><img src="img/slider/left.svg" alt="prev"></button>',
+      nextArrow: ' <button class=" slick-btn slick-next"><img src="img/slider/right.png" alt="next"></button>',
+      responsive: [
+        {
+          breakpoint: 742,
+          settings: {
+            arrows: false,
+            dots: true,
+
+
+          }
+        },
+
+      ]
+    });
+  });
+
+
   $("#navToggle").click(function () {
     $(this).toggleClass("active");
     $(".overlay").toggleClass("open");
@@ -18,38 +34,38 @@ $(function () {
     $(".overlay").toggleClass("open");
     $("body").toggleClass("locked");
   });
-  $('.product-slider__inner').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1900,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 1441,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 801,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      },
-    ]
-  });
+  // $('.product-slider__inner').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 4,
+  //   arrows: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1900,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: true,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 1441,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 801,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       }
+  //     },
+  //   ]
+  // });
 
   jQuery(document).ready(function () {
     jQuery(".eTimer").eTimer({

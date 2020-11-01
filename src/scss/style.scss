@@ -30,9 +30,10 @@
 
     &__logo img {
         max-width: 200px;
-        max-height: 150px;
+        max-height: 140px;
         overflow: hidden;
         position: relative;
+        top: -10px;
         z-index: 4;
     }
 
@@ -372,7 +373,8 @@
 //end services section
 //start why section
 .why,
-.about-us {
+.about-us,
+.slider-comment {
     background-color: $bg;
     padding: 20px 0;
     margin: 0 auto;
@@ -766,8 +768,7 @@
         text-align: left;
         height: 40px;
     }
-    .order__button {
-    }
+
     .order__button-sf {
         .btn {
             flex: 1 1 auto;
@@ -790,12 +791,6 @@
         display: flex;
         justify-content: space-around;
         margin: 0 auto;
-    }
-
-    &__column-left {
-    }
-
-    &__column-right {
     }
 }
 .about-us-list {
@@ -827,6 +822,121 @@
     height: 16px;
     left: 0;
 }
+//end about section
+//start slider
+
+.slider {
+    text-align: center;
+    // display: flex;
+    padding: 15px 0;
+}
+.slider-item {
+    //display: flex;
+    //justify-content: center;
+    // align-items: center;
+    img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    p {
+        @include f400;
+        font-size: 12px;
+        max-width: 580px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        letter-spacing: 0.24px;
+    }
+}
+.slick-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+}
+.slick-prev {
+    left: 183px;
+    top: 77px;
+}
+.slick-next {
+    right: 183px;
+    top: 77px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+// .slick-dots button {
+//     font-size: 0;
+//     padding: 0;
+//     margin: 0 10px;
+//     border-radius: 50%;
+// }
+.slick-dots button {
+    font-size: 0;
+    background: #a19c9977; // цвет фона
+    border: none; // без рамки
+    border-radius: 50%; // радиус закругления
+    height: 15px; // высота точки
+    width: 15px; // ширина точки
+    margin: 5px; // отступы между точками
+    outline: none; // убираем обводку
+}
+.slick-dots li[class="slick-active"] button {
+    background: #eac8be;
+}
+
+//end slider
+//start contact section
+.contact {
+    margin: 0 auto;
+    padding: 20px 0 30px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+
+        text-align: center;
+    }
+    .contact-title {
+        @include f700;
+        font-size: 16px;
+        letter-spacing: 0.32px;
+        line-height: 20.01px;
+        color: $tomate;
+        span {
+            @include f400;
+            font-size: 14px;
+            letter-spacing: 0.28px;
+            color: $color-text;
+        }
+    }
+    &__adres {
+        img {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__phone {
+        img {
+            padding-bottom: 15px;
+        }
+    }
+}
+.map {
+    max-width: 940px;
+    height: auto;
+    width: 100%;
+    // padding: 0 10px;
+    margin-bottom: 25px;
+}
+
+//end contact section
 //----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE

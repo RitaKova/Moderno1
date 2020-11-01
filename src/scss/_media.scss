@@ -303,6 +303,16 @@
     margin: 30px 0;
   }
 }
+@media (max-width: 515px) {
+  .about-us__inner {
+    flex-wrap: wrap;
+  }
+  .about-us__column-left,
+  .about-us__column-right {
+    width: 100%;
+  }
+}
+
 @media (max-width: 500px) {
   .why-items {
     align-items: flex-start;
